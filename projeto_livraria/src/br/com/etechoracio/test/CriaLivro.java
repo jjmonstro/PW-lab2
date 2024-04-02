@@ -1,3 +1,10 @@
+package br.com.etechoracio.test;
+
+import br.com.etechoracio.livraria.enums.TipoCapaEnum;
+import br.com.etechoracio.livraria.model.Editora;
+import br.com.etechoracio.livraria.model.Kindle;
+import br.com.etechoracio.livraria.model.Livro;
+
 public class CriaLivro {
     public static void main(String[] args) {
         Editora brocagang = new Editora();
@@ -13,8 +20,7 @@ public class CriaLivro {
         primeiroLivro.setEditora(brocagang);
         primeiroLivro.setValor(100);
         primeiroLivro.setTipoCapa(TipoCapaEnum.PERONALIZADA);
-        primeiroLivro.calcularDesc();
-
+        primeiroLivro.calcularDesc(0.15);
         primeiroLivro.exibir();
 
 
@@ -24,6 +30,11 @@ public class CriaLivro {
         segundoLivro.setTipoCapa(TipoCapaEnum.PERONALIZADA);
         segundoLivro.setEditora(vemtranquilo);
         segundoLivro.exibir();
+
+        Kindle terceiroLivro = new Kindle();
+        terceiroLivro.setTitulo("Tranquilo");
+        terceiroLivro.setEditora(brocagang);
+        terceiroLivro.setValor(90000);
     }
 
 }

@@ -1,15 +1,17 @@
-import javax.sound.midi.Soundbank;
+package br.com.etechoracio.livraria.model;
+
+import br.com.etechoracio.livraria.enums.TipoCapaEnum;
 
 public class Livro {
-    private double valor;
+    protected double valor;
     private String titulo;
     private String resumo;
     private String autor;
     private Editora editora;
     private TipoCapaEnum tipoCapa;
-    int paginas;
-    void exibir(){
-        System.out.println("\nDetalhes do Livro");
+    private int paginas;
+    public void exibir(){
+        System.out.println("\nDetalhes do br.com.etechoracio.livraria.model.Livro");
         System.out.println("Titulo " + titulo);
         System.out.println("Resumo " + resumo);
         System.out.println("Valor (Com desconto) " + formatarValor(calcularDesc(0.10)));
@@ -18,19 +20,29 @@ public class Livro {
         System.out.println("Quantidade de paginas " + paginas);
         editora.exibir();
         System.out.println("Taxa de Envio (com base no valor o desconto): " + formatarValor(getTaxaEnvio()));
-    }    double calcularDesc(double param){
-        return valor - (valor * param);
     }
+//    double calcularDesc(){
+//        return valor - (valor * percentual);
+//    }
 
     void cobrarCapa(){
-        if (tipoCapa==TipoCapaEnum.DURA){
+        if (tipoCapa== TipoCapaEnum.DURA){
             valor=valor+5;
-        } else if (tipoCapa==TipoCapaEnum.PERONALIZADA) {
+        } else if (tipoCapa== TipoCapaEnum.PERONALIZADA) {
             valor=valor+10;
         }
     }
+    public double calcularDesc(double percentual){
 
+        if (percentual >0.2) {
+            System.out.println("não deve ser maior que 20%");
+        } else {
+            valor = valor-valor*percentual;
+        }
+        return valor;
+    }
     double getTaxaEnvio(){
+
         return calcularDesc(0.10) * 0.05;
     }
 
@@ -38,9 +50,7 @@ public class Livro {
         return String.format("R$ %.2f", param);
     }
 
-    double calcularDesc(){
-        return valor * 0.15;
-    }
+
 
 
     public Livro() {

@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public enum TipoContaEnum {
+//João Pedro Correia, prova A
+public enum TipoContaEnum {
+    ALUNO,
+    PROFESSOR,
+    DIRETOR
 }

@@ -1,12 +1,13 @@
 package br.com.etechoracio.test;
 
 import br.com.etechoracio.livraria.model.Livro;
+import br.com.etechoracio.livraria.model.LivroImpresso;
 
 public class TestaReferencia {
 
     public static void main(String[] args) {
 
-        Livro livroA = new Livro();
+        LivroImpresso livroA = new LivroImpresso();
         livroA.setTitulo("Teste Referência");
         System.out.println("br.com.etechoracio.livraria.model.Livro A:" + livroA.getTitulo());
 

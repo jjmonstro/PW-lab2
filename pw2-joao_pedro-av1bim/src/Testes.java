@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class Testes {
+public class Testes {
+    ContaCantina conta1 = new ContaCantina();
+
+
 }

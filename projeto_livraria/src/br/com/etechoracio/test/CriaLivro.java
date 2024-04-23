@@ -1,9 +1,7 @@
 package br.com.etechoracio.test;
 
 import br.com.etechoracio.livraria.enums.TipoCapaEnum;
-import br.com.etechoracio.livraria.model.Editora;
-import br.com.etechoracio.livraria.model.Kindle;
-import br.com.etechoracio.livraria.model.Livro;
+import br.com.etechoracio.livraria.model.*;
 
 public class CriaLivro {
     public static void main(String[] args) {
@@ -15,7 +13,7 @@ public class CriaLivro {
         vemtranquilo.nome = "Vemtranquilo";
         vemtranquilo.site = "vemtranquilo.com.br";
 
-        Livro  primeiroLivro = new Livro(TipoCapaEnum.DURA);
+        LivroImpresso  primeiroLivro = new LivroImpresso();
         primeiroLivro.setTitulo("Sabão Macaco");
         primeiroLivro.setEditora(brocagang);
         primeiroLivro.setValor(100);
@@ -24,7 +22,7 @@ public class CriaLivro {
         primeiroLivro.exibir();
 
 
-        Livro segundoLivro = new Livro();
+        LivroImpresso segundoLivro = new LivroImpresso();
         segundoLivro.setTitulo("Ipiranga");
         segundoLivro.setAutor("Correx né Vida");
         segundoLivro.setTipoCapa(TipoCapaEnum.PERONALIZADA);
@@ -35,6 +33,11 @@ public class CriaLivro {
         terceiroLivro.setTitulo("Tranquilo");
         terceiroLivro.setEditora(brocagang);
         terceiroLivro.setValor(90000);
+
+        SacolaCompras sacola1234 = new SacolaCompras();
+        sacola1234.adicionar(primeiroLivro);
+        sacola1234.adicionar(segundoLivro);
+        sacola1234.adicionar(terceiroLivro);
     }
 
 }

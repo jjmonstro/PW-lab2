@@ -1,8 +1,9 @@
 package br.com.etechoracio.livraria.model;
 
 public class SacolaCompras {
-
-    public void adicionar(Livro item){
+    private double total;
+    public void adicionar(Exemplar item){
         System.out.println("Adicionado " + item);
+         total = total + item.getValor();
     }
 }

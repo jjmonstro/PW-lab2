@@ -2,7 +2,7 @@ package br.com.etechoracio.livraria.model;
 
 import br.com.etechoracio.livraria.enums.TipoCapaEnum;
 
-public abstract class Livro {
+public abstract class Livro implements Exemplar {
     protected double valor;
     private String titulo;
     private String resumo;
@@ -59,5 +59,33 @@ public abstract class Livro {
 
     public String getTitulo() {
         return titulo.toUpperCase();
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public String getResumo() {
+        return resumo;
+    }
+
+    public void setResumo(String resumo) {
+        this.resumo = resumo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public Editora getEditora() {
+        return editora;
+    }
+
+    public int getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(int paginas) {
+        this.paginas = paginas;
     }
 }

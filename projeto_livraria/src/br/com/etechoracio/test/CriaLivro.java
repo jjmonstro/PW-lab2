@@ -38,6 +38,12 @@ public class CriaLivro {
         sacola1234.adicionar(primeiroLivro);
         sacola1234.adicionar(segundoLivro);
         sacola1234.adicionar(terceiroLivro);
+
+        Revista primeiraRevista = new Revista();
+        primeiraRevista.setTitulo("OUUOOOOOOU");
+        primeiraRevista.setValor(15.99);
+
+        sacola1234.adicionar(primeiraRevista);
     }
 
 }

@@ -17,4 +17,9 @@ public class Kindle extends Livro {
         }
         return valor;
     }
+
+    @Override
+    public double valor() {
+        return valor;
+    }
 }

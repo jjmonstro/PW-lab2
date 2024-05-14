@@ -1,6 +1,6 @@
 package br.com.etechoracio.livraria.model;
 
-public class Kindle extends Livro {
+public class Kindle extends Livro implements Oferta{
     private String marcaDAgua;
 
     @Override
@@ -21,5 +21,9 @@ public class Kindle extends Livro {
     @Override
     public double valor() {
         return valor;
+    }
+
+
+    public void aplicarDesconto(Desconto desconto) {
     }
 }

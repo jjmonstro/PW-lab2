@@ -2,7 +2,7 @@ package br.com.etechoracio.livraria.model;
 
 import br.com.etechoracio.livraria.enums.TipoCapaEnum;
 
-public class LivroImpresso extends Livro{
+public class LivroImpresso extends Livro implements Oferta{
     private TipoCapaEnum tipoCapa;
 
     void cobrarCapa(){
@@ -32,5 +32,13 @@ public class LivroImpresso extends Livro{
     protected void detalhar(){
         System.out.println("Tipo de capa " + tipoCapa);
         System.out.println("Taxa Envio " + formatarValor(getTaxaEnvio()));
+    }
+
+    @Override
+    public double valor() {
+        return 0;
+    }
+
+    public void aplicarDesconto(Desconto desconto){
     }
 }

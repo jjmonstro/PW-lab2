@@ -44,6 +44,9 @@ public class CriaLivro {
         primeiraRevista.setValor(15.99);
 
         sacola1234.adicionar(primeiraRevista);
+
+        LivroCortesia livroCort1 = new LivroCortesia("Sabao Macaco");
+        sacola1234.adicionar(livroCort1);
     }
 
 }

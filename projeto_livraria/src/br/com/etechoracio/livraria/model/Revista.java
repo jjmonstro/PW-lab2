@@ -33,4 +33,7 @@ public class Revista implements Exemplar {
     public void setEditora(Editora editora) {
         this.editora = editora;
     }
+
+    public void aplicarDesconto(Desconto desconto) {
+    }
 }

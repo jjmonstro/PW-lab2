@@ -25,5 +25,6 @@ public class Kindle extends Livro implements Oferta{
 
 
     public void aplicarDesconto(Desconto desconto) {
+        this.valor=desconto.aplicar(this.valor);
     }
 }

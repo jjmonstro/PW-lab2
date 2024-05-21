@@ -32,7 +32,7 @@ public class CriaLivro {
         Kindle terceiroLivro = new Kindle();
         terceiroLivro.setTitulo("Tranquilo");
         terceiroLivro.setEditora(brocagang);
-        terceiroLivro.setValor(90000);
+        terceiroLivro.setValor(100);
 
         SacolaCompras sacola1234 = new SacolaCompras();
         sacola1234.adicionar(primeiroLivro);

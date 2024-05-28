@@ -1,6 +1,7 @@
 package br.com.etechoracio.livraria.model;
 
 import br.com.etechoracio.livraria.enums.TipoCapaEnum;
+import br.com.etechoracio.livraria.exception.CampoObrigatorioException;
 
 public abstract class Livro implements Exemplar {
     protected double valor;
@@ -41,12 +42,20 @@ public abstract class Livro implements Exemplar {
     }
 
     public void setValor(double valor) {
+        if (valor<0){
+            throw new CampoObrigatorioException("negativo");
+        }
         this.valor = valor;
         //cobrarCapa();
     }
 
     public void setTitulo(String titulo) {
+        if (titulo == null){
+            throw new CampoObrigatorioException("campo obrigatorio");
+        }
         this.titulo = titulo;
+
+
     }
 
     public void setAutor(String autor) {
@@ -72,6 +81,7 @@ public abstract class Livro implements Exemplar {
     public void setResumo(String resumo) {
         this.resumo = resumo;
     }
+
 
     public String getAutor() {
         return autor;

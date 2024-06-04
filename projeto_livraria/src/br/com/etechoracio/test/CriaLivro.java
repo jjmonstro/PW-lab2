@@ -47,6 +47,8 @@ public class CriaLivro {
 
         LivroCortesia livroCort1 = new LivroCortesia("Sabao Macaco");
         sacola1234.adicionar(livroCort1);
+
+        sacola1234.exibirItens();
     }
 
 }
